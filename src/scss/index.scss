@@ -1,10 +1,11 @@
+@import "reset";
 @import "variables";
+@import "animation";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import "components/logo";
+@import "components/title";
+@import "components/burger-menu";
+@import "components/button";
 
 body {
   font-family: Roboto, sans-serif;
@@ -22,7 +23,8 @@ body {
 }
 
 .header {
-  height: 95vh;
+  min-height: 95vh;
+  padding: 50px;
   background:
     linear-gradient(
       90deg,
@@ -31,4 +33,32 @@ body {
     ),
     url("img/header-background.png") center / cover no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 119px;
+  }
+  &__bottom {
+    max-width: 970px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 10px;
+    animation: leftToRight 1.7s ease;
+    animation-delay: 0.2s;
+    backface-visibility: hidden;
+  }
+  &__subtitle {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: normal;
+    display: block;
+    margin-bottom: 50px;
+    animation: rightToLeft 1.7s ease;
+    animation-delay: 0.2s;
+    letter-spacing: 5px;
+    color: #fff;
+    backface-visibility: hidden;
+  }
 }

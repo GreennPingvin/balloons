@@ -1,0 +1,27 @@
+.btn {
+  &:link,
+  &:visited {
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+    display: inline-block;
+    width: 277px;
+    height: 54px;
+    padding: 15px 40px;
+    transition: transform 0.3s;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    border-radius: 50px;
+    background: #fff;
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+    }
+    &:active {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+}
