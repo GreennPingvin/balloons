@@ -1,9 +1,49 @@
 .title {
-  font-size: 50px;
-  font-weight: 800;
-  line-height: normal;
-  display: block;
-  letter-spacing: 10px;
-  text-transform: uppercase;
   color: #fff;
+  &__first {
+    display: block;
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    animation: leftToRight 1.7s ease 0.2s;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+  }
+  &__second {
+    display: block;
+    font-size: 40px;
+    font-weight: 300;
+    animation: rightToLeft 1.7s ease 0.2s;
+    letter-spacing: 5px;
+    backface-visibility: hidden;
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

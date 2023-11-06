@@ -1,7 +1,6 @@
 @import "reset";
 @import "variables";
-@import "animation";
-
+@import "components/container";
 @import "components/logo";
 @import "components/title";
 @import "components/burger-menu";
@@ -11,18 +10,14 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 140%;
   padding: var(--global-padding);
   letter-spacing: 2px;
   color: var(--text-color, #777);
   background-color: white;
 }
 
-.container {
-  background-color: #f7f7f7;
-}
-
 .header {
+  position: relative;
   min-height: 95vh;
   padding: 50px;
   background:
@@ -36,29 +31,16 @@ body {
   &__top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 119px;
   }
   &__bottom {
-    max-width: 970px;
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 2 * var(--global-padding));
+    transform: translate(-50%, -50%);
     text-align: center;
   }
   &__title {
-    margin-bottom: 10px;
-    animation: leftToRight 1.7s ease;
-    animation-delay: 0.2s;
-    backface-visibility: hidden;
-  }
-  &__subtitle {
-    font-size: 40px;
-    font-weight: 300;
-    line-height: normal;
-    display: block;
     margin-bottom: 50px;
-    animation: rightToLeft 1.7s ease;
-    animation-delay: 0.2s;
-    letter-spacing: 5px;
-    color: #fff;
-    backface-visibility: hidden;
   }
 }
