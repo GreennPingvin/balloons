@@ -1,25 +1,30 @@
 @import "reset";
 @import "variables";
+@import "functions";
 @import "components/container";
 @import "components/logo";
 @import "components/title";
 @import "components/burger-menu";
 @import "components/button";
 
+html {
+  font-size: pxToPercent(7);
+}
+
 body {
   font-family: Roboto, sans-serif;
-  font-size: 16px;
+  font-size: toRem(16);
   font-weight: 400;
   padding: var(--global-padding);
-  letter-spacing: 2px;
-  color: var(--text-color, #777);
+  letter-spacing: toRem(2);
+  color: var(--text-color);
   background-color: white;
 }
 
 .header {
   position: relative;
   min-height: 95vh;
-  padding: 50px;
+  padding: toRem(50);
   background:
     linear-gradient(
       90deg,
@@ -41,6 +46,6 @@ body {
     text-align: center;
   }
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: toRem(50);
   }
 }

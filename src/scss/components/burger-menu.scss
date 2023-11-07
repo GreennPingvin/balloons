@@ -3,14 +3,14 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 70px;
-  height: 70px;
+  width: toRem(70);
+  height: toRem(70);
   border-radius: 50%;
   background-color: #ffffff;
-  gap: 8px;
+  gap: toRem(8);
   &__line {
-    width: 30px;
-    height: 2px;
+    width: toRem(30);
+    height: toRem(2);
     background-color: #000;
   }
 }
