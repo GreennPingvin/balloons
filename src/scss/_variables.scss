@@ -1,7 +1,13 @@
-:root {
-  // colors
-  --text-color: #777;
+// colors
+$text-color: #777777;
+$text-color-brown-light: #ba8554;
+$text-color-brown-dark: #a14f03;
+$text-color-white: #fafafa;
+$text-color-black: #000000;
+$text-color: #777777;
 
-  // sizes
-  --global-padding: 50px;
-}
+// sizes
+$global-padding: 50px;
+
+// decorations
+$box-shadow: 0 toRem(4) toRem(4) 0 rgba(0, 0, 0, 0.1);

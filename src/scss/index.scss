@@ -15,10 +15,10 @@ body {
   font-family: Roboto, sans-serif;
   font-size: toRem(16);
   font-weight: 400;
-  padding: var(--global-padding);
+  padding: $global-padding;
   letter-spacing: toRem(2);
-  color: var(--text-color);
-  background-color: white;
+  color: $text-color;
+  background-color: $text-color-white;
 }
 
 .header {
@@ -28,8 +28,8 @@ body {
   background:
     linear-gradient(
       90deg,
-      rgba(186, 133, 84, 0.7) 0.03%,
-      rgba(1, 1, 1, 0.7) 99.94%
+      rgba($text-color-brown-light, 0.7) 0.03%,
+      rgba($text-color-black, 0.7) 99.94%
     ),
     url("img/header-background.png") center / cover no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
@@ -41,7 +41,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: calc(100% - 2 * var(--global-padding));
+    width: calc(100% - 2 * $global-padding);
     transform: translate(-50%, -50%);
     text-align: center;
   }
