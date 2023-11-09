@@ -1,51 +1,15 @@
-@import "reset";
-@import "variables";
-@import "functions";
-@import "components/container";
+@import "abstracts/reset";
+@import "abstracts/variables";
+@import "abstracts/functions";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
 @import "components/logo";
 @import "components/title";
 @import "components/burger-menu";
 @import "components/button";
 
-html {
-  font-size: pxToPercent(7);
-}
-
-body {
-  font-family: Roboto, sans-serif;
-  font-size: toRem(16);
-  font-weight: 400;
-  padding: $global-padding;
-  letter-spacing: toRem(2);
-  color: $text-color;
-  background-color: $text-color-white;
-}
-
-.header {
-  position: relative;
-  min-height: 95vh;
-  padding: toRem(50);
-  background:
-    linear-gradient(
-      90deg,
-      rgba($text-color-brown-light, 0.7) 0.03%,
-      rgba($text-color-black, 0.7) 99.94%
-    ),
-    url("img/header-background.png") center / cover no-repeat;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-  &__top {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__bottom {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: calc(100% - 2 * $global-padding);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  &__title {
-    margin-bottom: toRem(50);
-  }
-}
+@import "widgets/header";

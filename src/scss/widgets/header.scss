@@ -1,0 +1,28 @@
+.header {
+  position: relative;
+  min-height: 95vh;
+  padding: toRem(50);
+  background:
+    linear-gradient(
+      90deg,
+      rgba($text-color-brown-light, 0.7) 0.03%,
+      rgba($text-color-black, 0.7) 99.94%
+    ),
+    url("header-background.png") center / cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__bottom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 2 * $global-padding);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: toRem(50);
+  }
+}
