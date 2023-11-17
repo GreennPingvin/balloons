@@ -1,0 +1,20 @@
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    font-weight: 700;
+    padding: toRem(10);
+    letter-spacing: toRem(0.2);
+    color: $text-color-brown-light;
+    border-bottom: 1px $text-color-brown-light solid;
+    transition: 0.5s all;
+  }
+  &:hover {
+    transform: translateY(toRem(-2));
+    color: white;
+    background-color: $text-color-brown-light;
+  }
+  &:active {
+    transform: translateY(0);
+  }
+}

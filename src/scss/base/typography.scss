@@ -1,0 +1,52 @@
+.title {
+  color: #fff;
+  &__first {
+    display: block;
+    font-size: toRem(50);
+    font-weight: 800;
+    margin-bottom: toRem(10);
+    animation: leftToRight 1.7s ease 0.2s;
+    letter-spacing: toRem(10);
+    text-transform: uppercase;
+    backface-visibility: hidden;
+  }
+  &__second {
+    display: block;
+    font-size: toRem(40);
+    font-weight: 300;
+    animation: rightToLeft 1.7s ease 0.2s;
+    letter-spacing: toRem(5);
+    backface-visibility: hidden;
+  }
+}
+.title-secondary {
+  font-size: toRem(36);
+  font-weight: 800;
+  letter-spacing: toRem(10);
+  text-transform: uppercase;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    rgba($text-color-brown-light, 0.7) 0.03%,
+    rgba($text-color-brown-dark, 0.7) 99.94%
+  );
+  background-clip: text;
+  transition: 0.4s all;
+  backface-visibility: hidden;
+  &:hover {
+    transform: skew(15deg, 2deg) scale(1.1);
+    text-shadow: $text-shadow-h2;
+  }
+}
+.title-tertiary {
+  font-size: toRem(20);
+  font-weight: 700;
+  letter-spacing: toRem(0.2);
+  color: $text-color;
+}
+
+.paragraph {
+  line-height: 140%;
+  letter-spacing: toRem(0.2);
+  color: $text-color;
+}

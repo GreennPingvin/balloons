@@ -9,9 +9,11 @@
 @import "base/utilities";
 
 @import "components/logo";
-@import "components/title";
 @import "components/burger-menu";
 @import "components/button";
+@import "components/button-text";
+@import "components/compositions";
 
 @import "widgets/header";
 @import "layout/grid";
+@import "pages/home";
