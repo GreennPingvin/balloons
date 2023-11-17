@@ -1,0 +1,22 @@
+.feature {
+  padding: toRem(25);
+  text-align: center;
+  border-radius: toRem(5);
+  background-color: rgba($text-color-white, 80);
+  box-shadow: $box-shadow;
+  transition: all 0.3s;
+  &__icon {
+    display: inline-block;
+    font-size: toRem(60);
+    color: transparent;
+    background: linear-gradient(
+      90deg,
+      rgba($text-color-brown-light, 0.7) 0.03%,
+      rgba($text-color-brown-dark, 0.7) 99.94%
+    );
+    background-clip: text;
+  }
+  &:hover {
+    transform: translateY(toRem(-15)) scale(1.03);
+  }
+}
