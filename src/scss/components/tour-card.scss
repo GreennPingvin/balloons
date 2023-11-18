@@ -1,0 +1,117 @@
+.tour-card {
+  position: relative;
+  height: 500px;
+  border-radius: toRem(5);
+  perspective: toRem(1500);
+  transform-style: preserve-3d;
+  &__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: inherit;
+    color: white;
+    border-radius: toRem(5);
+    box-shadow: $box-shadow;
+    transition: 0.7s all ease-out;
+    backface-visibility: hidden;
+    &--front {
+    }
+    &--back {
+      transform: rotateY(180deg);
+      background: linear-gradient(
+        120deg,
+        $text-color-brown-light,
+        $text-color-brown-dark
+      );
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+  &__img {
+    height: toRem(210);
+    margin-bottom: toRem(50);
+    background-blend-mode: hard-light;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    &--1 {
+      background: $text-color-brown-light url("tours/tour-1.png") center left
+        no-repeat;
+    }
+    &--2 {
+      background: $text-color-brown-light url("tours/tour-2.png") center left
+        no-repeat;
+    }
+    &--3 {
+      background: $text-color-brown-light url("tours/tour-3.png") center left
+        no-repeat;
+    }
+  }
+  &__title {
+    font-size: toRem(28);
+    font-weight: 300;
+    position: absolute;
+    top: toRem(170);
+    right: 0;
+    text-align: right;
+    letter-spacing: 2px;
+    color: $text-color-white;
+  }
+  &__descr {
+    ul {
+      z-index: 100;
+      width: 75%;
+      margin: 0 auto;
+      text-align: center;
+      li {
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: $text-color;
+        text-decoration-line: underline;
+        &:not(:last-child) {
+          margin-bottom: toRem(20);
+        }
+      }
+    }
+  }
+  &__span {
+    padding: toRem(10) toRem(20) toRem(3);
+    background: linear-gradient(
+      90deg,
+      $text-color-brown-light,
+      $text-color-brown-dark
+    );
+    &--1 {
+    }
+    &--2 {
+      position: absolute;
+      top: toRem(34);
+      right: 0;
+      padding-top: 0;
+      padding-bottom: toRem(10);
+    }
+  }
+  &__backside-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  &__text {
+    margin-bottom: toRem(80);
+    letter-spacing: toRem(2);
+    color: $text-color-white;
+    &--1 {
+      font-weight: 300;
+    }
+    &--2 {
+      font-size: toRem(60);
+      font-weight: 500;
+    }
+  }
+}

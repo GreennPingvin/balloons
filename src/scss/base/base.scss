@@ -1,7 +1,6 @@
 html {
   font-size: pxToPercent(16);
 }
-
 body {
   font-family: Roboto, sans-serif;
   font-size: toRem(16);
@@ -11,7 +10,6 @@ body {
   color: $text-color;
   background-color: $text-color-white;
 }
-
 .container {
   background-color: transparentize(#f7f7f7, 0.3);
 }
