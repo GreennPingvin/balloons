@@ -33,6 +33,9 @@
   background-clip: text;
   transition: 0.4s all;
   backface-visibility: hidden;
+  &--white {
+    color: $text-color-white;
+  }
   &:hover {
     transform: skew(15deg, 2deg) scale(1.1);
     text-shadow: $text-shadow-h2;
@@ -44,9 +47,8 @@
   letter-spacing: toRem(0.2);
   color: $text-color;
 }
-
 .paragraph {
   line-height: 140%;
-  letter-spacing: toRem(0.2);
+  letter-spacing: toRem(2);
   color: $text-color;
 }

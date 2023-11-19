@@ -2,14 +2,17 @@
   text-align: center;
 }
 .margin-bottom-10px {
-  margin-bottom: toRem(10);
+  margin-bottom: toRem(10) !important;
 }
 .margin-bottom-30px {
-  margin-bottom: toRem(30);
+  margin-bottom: toRem(30) !important;
 }
 .margin-bottom-50px {
-  margin-bottom: toRem(50);
+  margin-bottom: toRem(50) !important;
 }
 .margin-bottom-80px {
-  margin-bottom: toRem(80);
+  margin-bottom: toRem(80) !important;
+}
+.margin-bottom-95px {
+  margin-bottom: toRem(95) !important;
 }
