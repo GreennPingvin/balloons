@@ -11,5 +11,7 @@ body {
   background-color: $text-color-white;
 }
 .container {
-  background-color: transparentize(#f7f7f7, 0.3);
+  position: relative;
+  z-index: 0;
+  background-color: #f7f7f7;
 }

@@ -4,13 +4,12 @@ $text-color-brown-light: #ba8554;
 $text-color-brown-dark: #a14f03;
 $text-color-white: #fafafa;
 $text-color-black: #000000;
-
+$background-color: #f7f7f7;
 // sizes
 $grid-width: toRem(1140);
 $margin-vertical-big: toRem(80);
 $gutter-horizontal: toRem(60);
 $global-padding: 50px;
-
 // decorations
 $box-shadow: 0 toRem(4) toRem(4) 0 rgba(0, 0, 0, 0.1);
 $text-shadow-h2: toRem(10) toRem(14) toRem(14) rgba($text-color-black, 0.75);

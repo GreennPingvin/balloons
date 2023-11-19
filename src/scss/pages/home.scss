@@ -16,5 +16,9 @@
   }
 }
 .tours {
-  padding-top: toRem(210);
+  padding: toRem(210) 0 toRem(85);
+}
+.reviews {
+  position: relative;
+  padding: toRem(80) 0;
 }

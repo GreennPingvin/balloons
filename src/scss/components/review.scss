@@ -1,0 +1,50 @@
+.review {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+  padding: toRem(60);
+  transform: skewX(-20deg);
+  text-align: left;
+  -ms-text-align-last: right;
+  background: rgba($text-color-white, 0.75);
+  box-shadow: $box-shadow;
+  & > * {
+    transform: skewX(20deg);
+  }
+  &__img {
+    float: left;
+    overflow: hidden;
+    width: toRem(150);
+    height: toRem(150);
+    margin-right: toRem(40);
+    border-radius: 50%;
+    background-color: green;
+    shape-outside: circle(50% at 50% 50%);
+    img {
+      width: 100%;
+      transform: scale(1.2);
+      transition: all 0.5s;
+    }
+  }
+  &__name {
+    font-size: toRem(20);
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-align: center;
+    letter-spacing: 2px;
+    opacity: 0;
+    color: $text-color-white;
+    transition: all 0.5s;
+  }
+  &:hover &__name {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  &:hover img {
+    transform: scale(1);
+    filter: blur(toRem(3)) brightness(70%);
+  }
+}
