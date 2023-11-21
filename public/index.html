@@ -230,7 +230,7 @@
         </section>
         <section class="reviews">
           <div class="bg-gradient"></div>
-          <video autoplay class="bg-video" loop muted>
+          <video class="bg-video" loop muted>
             <source src="video/balloons.mp4" />
             <source src="video/balloons.webm" />
           </video>
@@ -283,6 +283,68 @@
           </div>
           <div class="text-align-center">
             <button class="btn btn--animated">ЗАБРОНИРОВАТЬ</button>
+          </div>
+        </section>
+        <section class="booking">
+          <div class="booking-form">
+            <div class="booking-form__form">
+              <h2 class="title-secondary text-align-center margin-bottom-30px">
+                ЗАБРОНИРОВАТЬ ТУР
+              </h2>
+              <form action="#">
+                <div class="booking-form__group">
+                  <input
+                    class="booking-form__input"
+                    id="name"
+                    placeholder="Имя Фамилия"
+                    required
+                    type="text"
+                  />
+                  <label class="booking-form__label" for="name">
+                    Ваше Имя и Фамилия
+                  </label>
+                </div>
+                <div class="booking-form__group">
+                  <input
+                    class="booking-form__input"
+                    id="email"
+                    placeholder="Ваш email"
+                    required
+                    type="email"
+                  />
+                  <label class="booking-form__label" for="email">
+                    Почтовый адрес
+                  </label>
+                </div>
+                <div class="booking-form__group">
+                  <div class="booking-form__group-radio">
+                    <input
+                      class="booking-form__input-radio"
+                      id="tour-1"
+                      name="checked"
+                      type="radio"
+                    />
+                    <label class="booking-form__radio-label" for="tour-1">
+                      <span class="booking-form__radio-btn"></span>
+                      Групповой тур
+                    </label>
+                  </div>
+                  <div class="booking-form__group-radio">
+                    <input
+                      class="booking-form__input-radio"
+                      id="tour-2"
+                      name="checked"
+                      type="radio"
+                    />
+                    <label class="booking-form__radio-label" for="tour-2">
+                      <span class="booking-form__radio-btn"></span>
+                      Индивидуальный тур
+                    </label>
+                  </div>
+                </div>
+              </form>
+              <button class="btn btn--brown">ЗАБРОНИРОВАТЬ</button>
+            </div>
           </div>
         </section>
       </main>

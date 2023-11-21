@@ -1,0 +1,98 @@
+.booking-form {
+  overflow: hidden;
+  width: 100%;
+  min-height: toRem(500);
+  border-radius: toRem(5);
+  background: rgb(255, 255, 255);
+  background:
+    linear-gradient(
+      110deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.8) 55%,
+      rgba(186, 133, 84, 0.3) 55%,
+      rgba(161, 79, 3, 0.3) 100%
+    ),
+    url("form-background.jpg") center / cover no-repeat;
+  box-shadow: $box-shadow;
+  &__form {
+    width: 60%;
+    padding: toRem(50);
+  }
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: toRem(20);
+    }
+  }
+  &__input {
+    font-size: toRem(16);
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    width: 75%;
+    padding: toRem(20);
+    letter-spacing: 2px;
+    color: $text-color-black;
+    border: none;
+    border-bottom: toRem(2) solid transparent;
+    border-radius: toRem(5);
+    &:focus {
+      border-bottom: toRem(3) solid #66d763;
+      outline: none;
+      box-shadow: $box-shadow;
+      &:invalid {
+        border-bottom: toRem(3) solid #d76363;
+      }
+    }
+    &:placeholder-shown + .booking-form__label {
+      visibility: hidden;
+      transform: translateY(toRem(-30));
+      opacity: 0;
+    }
+  }
+  &__label {
+    display: block;
+    margin-top: toRem(10);
+    margin-left: toRem(15);
+    transition: 0.2s all;
+  }
+  &__group-radio {
+    display: inline-block;
+    width: 45%;
+    margin-bottom: toRem(30);
+  }
+  &__radio-label {
+    position: relative;
+    padding-left: toRem(40);
+    cursor: pointer;
+  }
+  &__radio-btn {
+    display: block;
+    position: absolute;
+    top: toRem(-4);
+    left: 0;
+    width: toRem(30);
+    height: toRem(30);
+    border: toRem(5) solid $text-color-brown-dark;
+    border-radius: 50%;
+    &::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: toRem(15);
+      height: toRem(15);
+      content: "";
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      border-radius: 50%;
+      background-color: $text-color-brown-dark;
+      transition: 0.2s all;
+    }
+  }
+  &__input-radio:checked ~ &__radio-label &__radio-btn::after {
+    opacity: 1;
+  }
+  &__input-radio {
+    display: none;
+  }
+}

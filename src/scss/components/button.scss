@@ -42,3 +42,10 @@
     transition: all 0.4s;
   }
 }
+.btn--brown {
+  color: $text-color-white;
+  background-color: $text-color-brown-light;
+  &::after {
+    background: $text-color-brown-light;
+  }
+}
