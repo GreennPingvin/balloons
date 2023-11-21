@@ -1,0 +1,24 @@
+.footer {
+  min-height: toRem(380);
+  padding: toRem(80);
+  text-align: center;
+  background: #333;
+  img {
+    width: toRem(120);
+    height: toRem(151);
+    margin-bottom: toRem(50);
+  }
+  &__links {
+    display: inline-flex;
+    font-weight: 300;
+    gap: toRem(50);
+  }
+  &__link {
+    display: inline-block;
+    transition: all 0.3s;
+    &:hover {
+      transform: rotate(5deg) scale(1.2);
+      color: $text-color-brown-dark;
+    }
+  }
+}
