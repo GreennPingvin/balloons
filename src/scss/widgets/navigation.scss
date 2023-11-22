@@ -1,0 +1,128 @@
+.navigation {
+  &__toggle {
+    display: none;
+  }
+  &__button {
+    position: fixed;
+    z-index: 3;
+    top: toRem(100);
+    right: toRem(100);
+    width: toRem(80);
+    height: toRem(80);
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+    background-color: $text-color-white;
+    box-shadow: $box-shadow;
+  }
+  &__background {
+    position: fixed;
+    z-index: 1;
+    top: toRem(105);
+    right: toRem(105);
+    width: toRem(70);
+    height: toRem(70);
+    border-radius: 50%;
+    background: radial-gradient(
+      $text-color-brown-light,
+      $text-color-brown-dark
+    );
+  }
+  &__nav {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100vh;
+    opacity: 0;
+    transition: 0.3s all cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+  &__item {
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: toRem(50);
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: toRem(40);
+      font-weight: 300;
+      padding: toRem(10) toRem(20);
+      letter-spacing: toRem(5);
+      color: $text-color-white;
+      background: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $text-color-white 50%
+      );
+      background-size: 220%;
+      transition: all 0.4s;
+    }
+    &:hover,
+    &:active {
+      transform: translateX(toRem(10));
+      color: $text-color-brown-dark;
+      background-position: 100%;
+    }
+  }
+  &__toggle:checked ~ &__background {
+    transform: scale(80);
+  }
+  &__toggle:checked ~ &__nav {
+    width: 100%;
+    opacity: 1;
+  }
+  &__icon {
+    position: relative;
+    margin-top: 37px;
+    &,
+    &:before,
+    &:after {
+      display: inline-block;
+      width: 30px;
+      height: 2px;
+      background: $text-color-black;
+    }
+    &:before,
+    &:after {
+      position: absolute;
+      left: 0;
+      content: "";
+      transition: all 0.2s;
+    }
+    &:before {
+      top: -8px;
+    }
+    &:after {
+      top: 8px;
+    }
+  }
+  &__button:hover &__icon::before {
+    top: -10px;
+  }
+  &__button:hover &__icon:after {
+    top: 10px;
+  }
+  &__toggle:checked + &__button &__icon {
+    background-color: transparent;
+  }
+  &__toggle:checked + &__button &__icon:before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &__toggle:checked + &__button &__icon:after {
+    top: 0;
+    transform: rotate(45deg);
+  }
+}

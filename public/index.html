@@ -16,14 +16,35 @@
   </head>
   <body>
     <div class="container">
+      <div class="navigation">
+        <input class="navigation__toggle" id="navin-toggle" type="checkbox" />
+        <label class="navigation__button" for="navin-toggle">
+          <span class="navigation__icon"></span>
+        </label>
+        <div class="navigation__background"></div>
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">О НАС</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">СКИДКИ</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">ЛУЧШИЕ ТУРЫ</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">КАЛЬКУЛЯТОР ЦЕНЫ</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">СВЯЗАТЬСЯ С НАМИ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <header class="header">
         <div class="header__top">
           <img alt="логотип воздушный шар" class="logo" src="icons/logo.svg" />
-          <div class="burger-menu">
-            <div class="burger-menu__line"></div>
-            <div class="burger-menu__line"></div>
-            <div class="burger-menu__line"></div>
-          </div>
         </div>
         <div class="header__bottom">
           <h1 class="title header__title">
