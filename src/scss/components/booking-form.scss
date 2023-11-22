@@ -15,7 +15,7 @@
     url("form-background.jpg") center / cover no-repeat;
   box-shadow: $box-shadow;
   &__form {
-    width: 60%;
+    width: 70%;
     padding: toRem(50);
   }
   &__group {
@@ -57,8 +57,10 @@
   }
   &__group-radio {
     display: inline-block;
-    width: 45%;
     margin-bottom: toRem(30);
+    &:not(:last-child) {
+      margin-right: toRem(20);
+    }
   }
   &__radio-label {
     position: relative;

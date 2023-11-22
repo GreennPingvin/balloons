@@ -7,8 +7,8 @@
     z-index: 3;
     top: toRem(100);
     right: toRem(100);
-    width: toRem(80);
-    height: toRem(80);
+    width: toRem(90);
+    height: toRem(90);
     cursor: pointer;
     text-align: center;
     border-radius: 50%;
@@ -18,10 +18,10 @@
   &__background {
     position: fixed;
     z-index: 1;
-    top: toRem(105);
-    right: toRem(105);
-    width: toRem(70);
-    height: toRem(70);
+    top: toRem(110);
+    right: toRem(110);
+    width: toRem(50);
+    height: toRem(50);
     border-radius: 50%;
     background: radial-gradient(
       $text-color-brown-light,

@@ -1,5 +1,14 @@
 html {
   font-size: pxToPercent(16);
+  @include respond(tab-land) {
+    font-size: pxToPercent(10);
+  }
+  @include respond(tab-port) {
+    font-size: pxToPercent(8);
+  }
+  @include respond(phone) {
+    font-size: pxToPercent(7);
+  }
 }
 body {
   font-family: Roboto, sans-serif;

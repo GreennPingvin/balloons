@@ -14,9 +14,15 @@
   & > * {
     transform: skewY(-7deg);
   }
+  @include respond(tab-land) {
+    padding: toRem(150) 0;
+  }
 }
 .tours {
   padding: toRem(210) 0 toRem(85);
+  @include respond(tab-land) {
+    padding: toRem(150) 0;
+  }
 }
 .reviews {
   position: relative;
