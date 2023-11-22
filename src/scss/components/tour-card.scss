@@ -1,6 +1,6 @@
 .tour-card {
   position: relative;
-  height: 500px;
+  height: toRem(500);
   border-radius: toRem(5);
   perspective: toRem(1500);
   transform-style: preserve-3d;
@@ -58,7 +58,7 @@
     top: toRem(170);
     right: 0;
     text-align: right;
-    letter-spacing: 2px;
+    letter-spacing: toRem(2);
     color: $text-color-white;
   }
   &__descr {
@@ -69,7 +69,7 @@
       text-align: center;
       li {
         font-weight: 700;
-        letter-spacing: 2px;
+        letter-spacing: toRem(2);
         color: $text-color;
         text-decoration-line: underline;
         &:not(:last-child) {

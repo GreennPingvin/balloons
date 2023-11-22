@@ -30,7 +30,7 @@
     line-height: normal;
     width: 75%;
     padding: toRem(20);
-    letter-spacing: 2px;
+    letter-spacing: toRem(2);
     color: $text-color-black;
     border: none;
     border-bottom: toRem(2) solid transparent;

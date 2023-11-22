@@ -85,13 +85,13 @@
   }
   &__icon {
     position: relative;
-    margin-top: 37px;
+    margin-top: toRem(45);
     &,
     &:before,
     &:after {
       display: inline-block;
-      width: 30px;
-      height: 2px;
+      width: toRem(30);
+      height: toRem(2);
       background: $text-color-black;
     }
     &:before,
@@ -102,17 +102,17 @@
       transition: all 0.2s;
     }
     &:before {
-      top: -8px;
+      top: toRem(-8);
     }
     &:after {
-      top: 8px;
+      top: toRem(8);
     }
   }
   &__button:hover &__icon::before {
-    top: -10px;
+    top: toRem(-10);
   }
   &__button:hover &__icon:after {
-    top: 10px;
+    top: toRem(10);
   }
   &__toggle:checked + &__button &__icon {
     background-color: transparent;
