@@ -23,6 +23,9 @@
   @include respond(tab-land) {
     padding: toRem(150) 0;
   }
+  @include respond(tab-port) {
+    padding: toRem(80) 0;
+  }
 }
 .reviews {
   position: relative;

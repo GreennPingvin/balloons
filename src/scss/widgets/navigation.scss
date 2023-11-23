@@ -14,6 +14,10 @@
     border-radius: 50%;
     background-color: $text-color-white;
     box-shadow: $box-shadow;
+    @include respond(tab-port) {
+      top: toRem(50);
+      right: toRem(50);
+    }
   }
   &__background {
     position: fixed;
@@ -27,6 +31,10 @@
       $text-color-brown-light,
       $text-color-brown-dark
     );
+    @include respond(tab-port) {
+      top: toRem(60);
+      right: toRem(60);
+    }
   }
   &__nav {
     position: fixed;

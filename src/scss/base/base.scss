@@ -18,6 +18,9 @@ body {
   letter-spacing: toRem(2);
   color: $text-color;
   background-color: $text-color-white;
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
 .container {
   position: relative;
